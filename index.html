@@ -15,11 +15,12 @@
                     colors: {
                         royalBurgundy: '#58182b',
                         deepBurgundy: '#3d101d',
-                        champagneBg: '#fdfbf7',
-                        cardCream: '#fffefb',
-                        goldAccent: '#d4af37',
-                        goldLight: '#f4e4bc',
-                        goldBorder: '#e6ca65',
+                        champagneBg: '#fbf5e6',
+                        cardCream: '#fffbf0',
+                        richGold: '#c59b27',
+                        deepGold: '#997316',
+                        goldGradientStart: '#f3d675',
+                        goldGradientEnd: '#b38728',
                     },
                     fontFamily: {
                         serif: ['"Cormorant Garamond"', 'serif'],
@@ -30,25 +31,27 @@
         }
     </script>
 </head>
-<body class="bg-gradient-to-b from-[#fdfbf7] via-[#f7f0e4] to-[#ede3d0] text-gray-800 font-sans antialiased selection:bg-goldAccent selection:text-white min-h-screen">
+<body class="bg-gradient-to-b from-[#fbf5e6] via-[#f2e2be] to-[#e4ce9d] text-gray-800 font-sans antialiased selection:bg-richGold selection:text-white min-h-screen">
 
-    <!-- Interactive Elegant Splash Screen -->
+    <!-- Interactive Royal Gold Splash Screen -->
     <section id="splash-screen" class="fixed inset-0 z-50 bg-gradient-to-br from-[#58182b] via-[#3d101d] to-[#1f070f] flex flex-col items-center justify-center text-center p-6 transition-all duration-700">
-        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#f4e4bc_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#f3d675_1px,transparent_1px)] [background-size:24px_24px]"></div>
         
-        <div class="z-10 space-y-6 max-w-sm bg-[#fffefb]/95 p-8 rounded-3xl border-2 border-goldBorder shadow-2xl backdrop-blur-xl">
-            <span class="text-xs uppercase tracking-[0.4em] text-royalBurgundy font-semibold">Wedding Invitation</span>
+        <div class="z-10 space-y-6 max-w-sm bg-[#fffbf0]/95 p-8 rounded-3xl border-2 border-richGold shadow-2xl backdrop-blur-xl relative">
+            <div class="absolute inset-0 rounded-3xl border border-goldGradientStart/50 pointer-events-none"></div>
             
-            <div class="w-32 h-32 mx-auto rounded-full border-2 border-goldBorder flex items-center justify-center p-3 shadow-xl relative bg-gradient-to-tr from-goldLight/30 to-transparent">
+            <span class="text-xs uppercase tracking-[0.4em] text-royalBurgundy font-bold">Wedding Invitation</span>
+            
+            <div class="w-32 h-32 mx-auto rounded-full border-2 border-richGold flex items-center justify-center p-3 shadow-xl relative bg-gradient-to-tr from-goldGradientStart/30 to-goldGradientEnd/20">
                 <h1 class="font-serif text-3xl text-royalBurgundy italic font-bold">L & V</h1>
             </div>
 
             <div class="space-y-1">
                 <h2 class="font-serif text-2xl text-royalBurgundy font-bold">Lilly Grace & Vijay Kumar</h2>
-                <p class="text-xs text-goldAccent tracking-widest uppercase font-semibold">November 26, 2026</p>
+                <p class="text-xs text-richGold tracking-widest uppercase font-bold">November 26, 2026</p>
             </div>
 
-            <button onclick="openInvitation()" class="mt-4 w-full bg-gradient-to-r from-royalBurgundy to-[#76233b] text-goldLight font-bold px-8 py-4 tracking-widest uppercase text-xs rounded-xl shadow-lg hover:opacity-95 transition transform active:scale-95">
+            <button onclick="openInvitation()" class="mt-4 w-full bg-gradient-to-r from-goldGradientStart via-richGold to-goldGradientEnd text-royalBurgundy font-extrabold px-8 py-4 tracking-widest uppercase text-xs rounded-xl shadow-xl hover:brightness-110 transition transform active:scale-95">
                Open Invitation ✨
             </button>
         </div>
@@ -59,121 +62,121 @@
 
         <!-- Header & Couple Classy Photo Section -->
         <section class="text-center space-y-4">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold">With Joyful Hearts</span>
+            <span class="text-xs uppercase tracking-[0.3em] text-richGold font-extrabold">With Joyful Hearts</span>
             <h1 class="font-serif text-4xl text-royalBurgundy font-bold">Lilly Grace & Vijay Kumar</h1>
-            <p class="font-serif italic text-sm text-gray-600 px-4">"What therefore God hath joined together, let not man put asunder."</p>
+            <p class="font-serif italic text-sm text-gray-700 px-4">"What therefore God hath joined together, let not man put asunder."</p>
             
-            <!-- Classy Couple Image Frame with Gold Glow -->
-            <div class="mt-6 rounded-3xl overflow-hidden border-2 border-goldBorder shadow-2xl max-w-xs mx-auto bg-cardCream p-2.5 relative">
-                <div class="absolute inset-0 bg-gradient-to-t from-goldAccent/10 to-transparent pointer-events-none"></div>
+            <!-- Classy Couple Image Frame with Rich Gold Border -->
+            <div class="mt-6 rounded-3xl overflow-hidden border-2 border-richGold shadow-2xl max-w-xs mx-auto bg-cardCream p-2.5 relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-richGold/20 to-transparent pointer-events-none"></div>
                 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800" alt="Lilly Grace & Vijay Kumar" class="w-full h-80 object-cover rounded-2xl">
             </div>
         </section>
 
-        <!-- Parents Section with Golden Border -->
-        <section class="space-y-4 bg-cardCream border border-goldBorder/60 rounded-3xl p-6 shadow-xl text-center relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-goldAccent via-goldLight to-goldAccent"></div>
+        <!-- Parents Section with Rich Gold Accents -->
+        <section class="space-y-4 bg-cardCream border-2 border-richGold/60 rounded-3xl p-6 shadow-xl text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-goldGradientStart via-richGold to-goldGradientEnd"></div>
             
             <div class="space-y-1 pt-2">
-                <span class="text-[10px] uppercase tracking-widest text-goldAccent font-bold block">Daughter of</span>
+                <span class="text-[10px] uppercase tracking-widest text-richGold font-extrabold block">Daughter of</span>
                 <h3 class="font-serif text-lg text-royalBurgundy font-semibold">Medapati Babu Sundar Singh & Medapati Hepsiba</h3>
             </div>
 
-            <div class="w-16 h-[1px] bg-goldBorder/50 mx-auto"></div>
+            <div class="w-16 h-[1.5px] bg-richGold/50 mx-auto"></div>
 
             <div class="space-y-1">
-                <span class="text-[10px] uppercase tracking-widest text-goldAccent font-bold block">Son of</span>
+                <span class="text-[10px] uppercase tracking-widest text-richGold font-extrabold block">Son of</span>
                 <h3 class="font-serif text-lg text-royalBurgundy font-semibold">Budala John & Budala Padma</h3>
             </div>
         </section>
 
-        <!-- Wedding Ceremony Details (Rich Burgundy & Gold) -->
-        <section class="bg-gradient-to-b from-royalBurgundy to-deepBurgundy text-white rounded-3xl p-6 text-center space-y-5 shadow-2xl border-2 border-goldBorder relative overflow-hidden">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldLight font-bold">Holy Matrimony</span>
-            <h2 class="font-serif text-3xl text-goldLight font-bold">Wedding Ceremony</h2>
+        <!-- Wedding Ceremony Details -->
+        <section class="bg-gradient-to-b from-royalBurgundy to-deepBurgundy text-white rounded-3xl p-6 text-center space-y-5 shadow-2xl border-2 border-richGold relative overflow-hidden">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldGradientStart font-extrabold">Holy Matrimony</span>
+            <h2 class="font-serif text-3xl text-goldGradientStart font-bold">Wedding Ceremony</h2>
             
-            <div class="font-serif text-base text-goldLight tracking-widest border-y border-goldAccent/40 py-3 font-medium">
+            <div class="font-serif text-base text-goldGradientStart tracking-widest border-y border-richGold/50 py-3 font-semibold">
                 Thursday, 26th Nov 2026 • 10:00 AM[cite: 9]
             </div>
 
             <div class="space-y-1 text-sm text-gray-200">
-                <p class="font-serif text-2xl text-goldLight font-semibold">Sreerastu Convention</p>
+                <p class="font-serif text-2xl text-goldGradientStart font-semibold">Sreerastu Convention</p>
                 <p class="text-xs text-gray-300">RamaRaopeta, Kakinada[cite: 9]</p>
             </div>
 
             <!-- Direct Google Maps Location Button -->
             <div class="pt-2">
-                <a href="https://share.google/TG9azaepPCDv0mVlB" target="_blank" class="inline-block bg-gradient-to-r from-goldAccent to-goldLight text-royalBurgundy font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg hover:brightness-110 transition">
+                <a href="https://share.google/TG9azaepPCDv0mVlB" target="_blank" class="inline-block bg-gradient-to-r from-goldGradientStart via-richGold to-goldGradientEnd text-royalBurgundy font-extrabold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg hover:brightness-110 transition">
                     📍 Open Wedding Location Map
                 </a>
             </div>
 
-            <div class="pt-2 border-t border-goldAccent/30 text-xs text-goldLight italic">
+            <div class="pt-2 border-t border-richGold/40 text-xs text-goldGradientStart italic">
                 To be solemnized by Rev. D. Vara Prasad[cite: 9]
             </div>
         </section>
 
-        <!-- Reception Details (Rich Burgundy & Gold) -->
-        <section class="bg-gradient-to-b from-royalBurgundy to-deepBurgundy text-white rounded-3xl p-6 text-center space-y-5 shadow-2xl border-2 border-goldBorder relative overflow-hidden">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldLight font-bold">Evening Celebration</span>
-            <h2 class="font-serif text-3xl text-goldLight font-bold">Reception</h2>
+        <!-- Reception Details -->
+        <section class="bg-gradient-to-b from-royalBurgundy to-deepBurgundy text-white rounded-3xl p-6 text-center space-y-5 shadow-2xl border-2 border-richGold relative overflow-hidden">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldGradientStart font-extrabold">Evening Celebration</span>
+            <h2 class="font-serif text-3xl text-goldGradientStart font-bold">Reception</h2>
             
-            <div class="font-serif text-base text-goldLight tracking-widest border-y border-goldAccent/40 py-3 font-medium">
+            <div class="font-serif text-base text-goldGradientStart tracking-widest border-y border-richGold/50 py-3 font-semibold">
                 Friday, 27th Nov 2026 • 5:00 PM[cite: 8]
             </div>
 
             <div class="space-y-1 text-sm text-gray-200">
-                <p class="font-serif text-2xl text-goldLight font-semibold">RK Function Hall</p>
+                <p class="font-serif text-2xl text-goldGradientStart font-semibold">RK Function Hall</p>
                 <p class="text-xs text-gray-300">Sujatha Nagar, Vsp.[cite: 8]</p>
             </div>
 
             <!-- Direct Google Maps Location Button -->
             <div class="pt-2">
-                <a href="https://share.google/Vb6JJONMzNxhFhi2A" target="_blank" class="inline-block bg-gradient-to-r from-goldAccent to-goldLight text-royalBurgundy font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg hover:brightness-110 transition">
+                <a href="https://share.google/Vb6JJONMzNxhFhi2A" target="_blank" class="inline-block bg-gradient-to-r from-goldGradientStart via-richGold to-goldGradientEnd text-royalBurgundy font-extrabold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg hover:brightness-110 transition">
                     📍 Open Reception Location Map
                 </a>
             </div>
         </section>
 
         <!-- Blessings / God Servants -->
-        <section class="space-y-4 bg-cardCream border border-goldBorder/60 rounded-3xl p-6 shadow-xl text-center relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-goldAccent via-goldLight to-goldAccent"></div>
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold block pt-1">By God's Grace & Blessings</span>
+        <section class="space-y-4 bg-cardCream border-2 border-richGold/60 rounded-3xl p-6 shadow-xl text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-goldGradientStart via-richGold to-goldGradientEnd"></div>
+            <span class="text-xs uppercase tracking-[0.3em] text-richGold font-extrabold block pt-1">By God's Grace & Blessings</span>
             
             <div class="space-y-3 text-sm text-gray-700 pt-1">
                 <p><strong class="text-royalBurgundy">Bro. David Martin</strong> (Jehovah Nissi, Vizianagaram)[cite: 8]</p>
                 <p><strong class="text-royalBurgundy">Bro. Joshua Barnabas</strong> (Jehovah Shammah, Tonnalagaruvu)[cite: 8]</p>
-                <p class="pt-2 border-t border-goldBorder/30"><strong class="text-royalBurgundy">Resident God Servant:</strong><br>Bro. Jonathan Martin (Patmos Church of Living God, Lankelapalem)[cite: 8]</p>
+                <p class="pt-2 border-t border-richGold/30"><strong class="text-royalBurgundy">Resident God Servant:</strong><br>Bro. Jonathan Martin (Patmos Church of Living God, Lankelapalem)[cite: 8]</p>
             </div>
         </section>
 
         <!-- Live Countdown Timer -->
-        <section class="bg-cardCream border border-goldBorder/60 rounded-3xl p-6 text-center space-y-4 shadow-xl">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold">Countdown to Wedding</span>
+        <section class="bg-cardCream border-2 border-richGold/60 rounded-3xl p-6 text-center space-y-4 shadow-xl">
+            <span class="text-xs uppercase tracking-[0.3em] text-richGold font-extrabold">Countdown to Wedding</span>
             <div class="grid grid-cols-4 gap-2 text-center pt-2">
-                <div class="bg-gradient-to-b from-[#fdfbf7] to-[#f4e4bc]/30 p-3 rounded-xl border border-goldBorder/50 shadow-inner">
+                <div class="bg-gradient-to-b from-[#fffbf0] to-[#f3d675]/30 p-3 rounded-xl border border-richGold/60 shadow-inner">
                     <span id="days" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Days</span>
+                    <span class="text-[9px] uppercase text-gray-700 font-bold">Days</span>
                 </div>
-                <div class="bg-gradient-to-b from-[#fdfbf7] to-[#f4e4bc]/30 p-3 rounded-xl border border-goldBorder/50 shadow-inner">
+                <div class="bg-gradient-to-b from-[#fffbf0] to-[#f3d675]/30 p-3 rounded-xl border border-richGold/60 shadow-inner">
                     <span id="hours" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Hours</span>
+                    <span class="text-[9px] uppercase text-gray-700 font-bold">Hours</span>
                 </div>
-                <div class="bg-gradient-to-b from-[#fdfbf7] to-[#f4e4bc]/30 p-3 rounded-xl border border-goldBorder/50 shadow-inner">
+                <div class="bg-gradient-to-b from-[#fffbf0] to-[#f3d675]/30 p-3 rounded-xl border border-richGold/60 shadow-inner">
                     <span id="minutes" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Mins</span>
+                    <span class="text-[9px] uppercase text-gray-700 font-bold">Mins</span>
                 </div>
-                <div class="bg-gradient-to-b from-[#fdfbf7] to-[#f4e4bc]/30 p-3 rounded-xl border border-goldBorder/50 shadow-inner">
+                <div class="bg-gradient-to-b from-[#fffbf0] to-[#f3d675]/30 p-3 rounded-xl border border-richGold/60 shadow-inner">
                     <span id="seconds" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Secs</span>
+                    <span class="text-[9px] uppercase text-gray-700 font-bold">Secs</span>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
         <section class="text-center space-y-2 pt-2 pb-8">
-            <p class="font-serif text-lg text-royalBurgundy italic font-semibold">We await your gracious presence!</p>
-            <p class="text-[10px] uppercase tracking-widest text-gray-500">Medapati Wedding Invitation</p>
+            <p class="font-serif text-lg text-royalBurgundy italic font-bold">We await your gracious presence!</p>
+            <p class="text-[10px] uppercase tracking-widest text-gray-600 font-semibold">Medapati Wedding Invitation</p>
         </section>
 
     </div>
