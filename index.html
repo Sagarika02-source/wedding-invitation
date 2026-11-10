@@ -7,16 +7,17 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#0f0712',
-                        cardBg: '#1a0e22',
-                        goldAccent: '#dfb15b',
-                        goldLight: '#f3e1a9'
+                        royalPlum: '#24102f',
+                        deepWine: '#170920',
+                        cardOverlay: 'rgba(36, 16, 47, 0.85)',
+                        goldAccent: '#f3d5a2',
+                        goldBright: '#ffd700',
                     },
                     fontFamily: {
                         serif: ['"Cormorant Garamond"', 'serif'],
@@ -27,43 +28,43 @@
         }
     </script>
 </head>
-<body class="bg-darkBg text-gray-200 font-sans antialiased selection:bg-goldAccent selection:text-darkBg">
+<body class="bg-gradient-to-b from-royalPlum via-deepWine to-black text-gray-100 font-sans antialiased selection:bg-goldAccent selection:text-royalPlum min-h-screen">
 
     <!-- Splash Screen / Welcome Gate -->
-    <section id="splash-screen" class="fixed inset-0 z-40 bg-darkBg flex flex-col items-center justify-center text-center p-6 transition-opacity duration-700">
-        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#dfb15b_1px,transparent_1px)] [background-size:20px_20px]"></div>
-        <div class="z-10 space-y-6 max-w-sm">
-            <span class="text-xs uppercase tracking-[0.4em] text-goldAccent/70">The Wedding Invitation</span>
-            <div class="w-36 h-36 mx-auto rounded-full border border-goldAccent/50 flex items-center justify-center p-3 shadow-2xl relative">
-                <div class="absolute inset-2 rounded-full border border-goldAccent/20"></div>
-                <h1 class="font-serif text-4xl text-goldAccent italic">K & A</h1>
+    <section id="splash-screen" class="fixed inset-0 z-50 bg-gradient-to-br from-[#2a1238] via-[#170920] to-[#0d0413] flex flex-col items-center justify-center text-center p-6 transition-opacity duration-700">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#f3d5a2_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="z-10 space-y-6 max-w-sm bg-black/30 p-8 rounded-3xl border border-goldAccent/30 shadow-2xl backdrop-blur-md">
+            <span class="text-xs uppercase tracking-[0.4em] text-goldAccent font-semibold">The Royal Wedding Invitation</span>
+            <div class="w-36 h-36 mx-auto rounded-full border-2 border-goldAccent/70 flex items-center justify-center p-3 shadow-2xl relative bg-gradient-to-tr from-goldAccent/10 to-transparent">
+                <div class="absolute inset-2 rounded-full border border-goldAccent/30"></div>
+                <h1 class="font-serif text-4xl text-goldBright italic font-bold">K & A</h1>
             </div>
-            <h2 class="font-serif text-2xl text-white">Kabir & Aira</h2>
-            <p class="text-xs text-gray-400 font-light">February 14, 2027</p>
-            <button onclick="openInvitation()" class="mt-4 bg-goldAccent text-darkBg font-medium px-8 py-3 tracking-widest uppercase text-xs rounded shadow-lg hover:bg-goldLight transition">
+            <h2 class="font-serif text-3xl text-white tracking-wide">Kabir & Aira</h2>
+            <p class="text-xs text-goldAccent tracking-widest uppercase font-medium">February 14, 2027</p>
+            <button onclick="openInvitation()" class="mt-4 w-full bg-gradient-to-r from-[#e6c584] to-[#f3d5a2] text-royalPlum font-semibold px-8 py-4 tracking-widest uppercase text-xs rounded-xl shadow-xl hover:brightness-110 transition transform active:scale-95">
                Open Invitation ✨
             </button>
         </div>
     </section>
 
     <!-- Main Content Container -->
-    <div id="main-content" class="max-w-md mx-auto px-4 py-16 space-y-24 opacity-0 transition-opacity duration-1000">
+    <div id="main-content" class="max-w-md mx-auto px-4 py-16 space-y-20 opacity-0 transition-opacity duration-1000">
 
         <!-- Couple Intro Section -->
-        <section class="text-center space-y-6 pt-8">
-            <div class="rounded-t-full rounded-b-2xl overflow-hidden border border-goldAccent/30 shadow-2xl max-w-xs mx-auto">
-                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800" alt="Kabir & Aira" class="w-full h-96 object-cover filter brightness-90">
+        <section class="text-center space-y-6 pt-4">
+            <div class="rounded-t-full rounded-b-3xl overflow-hidden border-2 border-goldAccent/40 shadow-2xl max-w-xs mx-auto bg-cardOverlay p-2">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800" alt="Kabir & Aira" class="w-full h-96 object-cover rounded-t-full rounded-b-2xl filter brightness-105">
             </div>
-            <p class="font-serif italic text-lg text-goldAccent/95 px-4">
-                "Together with their families, invite you to celebrate their wedding day."
+            <p class="font-serif italic text-xl text-goldAccent px-4 leading-relaxed">
+                "Together with their families, invite you to celebrate their wedding day with love, joy, and blessings."
             </p>
         </section>
 
         <!-- Video Section (Embedded Cinematic Video) -->
-        <section class="space-y-4 text-center">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent/60">Cinematic Moments</span>
-            <h2 class="font-serif text-3xl text-goldAccent">Our Story in Motion</h2>
-            <div class="rounded-xl overflow-hidden border border-goldAccent/30 shadow-2xl bg-cardBg">
+        <section class="space-y-4 text-center bg-black/40 p-5 rounded-3xl border border-goldAccent/20 shadow-xl">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">Cinematic Moments</span>
+            <h2 class="font-serif text-3xl text-goldBright">Our Story in Motion</h2>
+            <div class="rounded-2xl overflow-hidden border border-goldAccent/40 shadow-2xl bg-royalPlum">
                 <video controls class="w-full h-64 object-cover">
                     <source src="https://assets.mixkit.co/videos/preview/mixkit-bride-and-groom-smiling-at-their-wedding-41380-large.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -72,51 +73,51 @@
         </section>
 
         <!-- Countdown Timer Section -->
-        <section class="bg-gradient-to-b from-cardBg to-darkBg border border-goldAccent/30 rounded-2xl p-6 text-center space-y-6 shadow-xl">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent/60">Countdown to Forever</span>
-            <h2 class="font-serif text-3xl text-goldAccent">Save The Date</h2>
-            <p class="font-serif text-xl text-white tracking-widest border-y border-goldAccent/20 py-3">
+        <section class="bg-gradient-to-b from-[#321743] to-[#1c0b26] border-2 border-goldAccent/40 rounded-3xl p-6 text-center space-y-6 shadow-2xl relative">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">Countdown to Forever</span>
+            <h2 class="font-serif text-3xl text-goldBright">Save The Date</h2>
+            <p class="font-serif text-xl text-white tracking-widest border-y border-goldAccent/30 py-3 font-semibold">
                 February 14, 2027
             </p>
-            <div class="grid grid-cols-4 gap-2 text-center">
-                <div class="bg-darkBg p-3 rounded border border-goldAccent/20">
-                    <span id="days" class="block font-serif text-2xl text-goldAccent">00</span>
-                    <span class="text-[9px] uppercase tracking-wider text-gray-400">Days</span>
+            <div class="grid grid-cols-4 gap-3 text-center pt-2 pb-2">
+                <div class="bg-black/50 p-3 rounded-2xl border border-goldAccent/30 shadow-inner">
+                    <span id="days" class="block font-serif text-3xl text-goldBright font-bold">00</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-300 font-medium">Days</span>
                 </div>
-                <div class="bg-darkBg p-3 rounded border border-goldAccent/20">
-                    <span id="hours" class="block font-serif text-2xl text-goldAccent">00</span>
-                    <span class="text-[9px] uppercase tracking-wider text-gray-400">Hours</span>
+                <div class="bg-black/50 p-3 rounded-2xl border border-goldAccent/30 shadow-inner">
+                    <span id="hours" class="block font-serif text-3xl text-goldBright font-bold">00</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-300 font-medium">Hours</span>
                 </div>
-                <div class="bg-darkBg p-3 rounded border border-goldAccent/20">
-                    <span id="minutes" class="block font-serif text-2xl text-goldAccent">00</span>
-                    <span class="text-[9px] uppercase tracking-wider text-gray-400">Mins</span>
+                <div class="bg-black/50 p-3 rounded-2xl border border-goldAccent/30 shadow-inner">
+                    <span id="minutes" class="block font-serif text-3xl text-goldBright font-bold">00</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-300 font-medium">Mins</span>
                 </div>
-                <div class="bg-darkBg p-3 rounded border border-goldAccent/20">
-                    <span id="seconds" class="block font-serif text-2xl text-goldAccent">00</span>
-                    <span class="text-[9px] uppercase tracking-wider text-gray-400">Secs</span>
+                <div class="bg-black/50 p-3 rounded-2xl border border-goldAccent/30 shadow-inner">
+                    <span id="seconds" class="block font-serif text-3xl text-goldBright font-bold">00</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-300 font-medium">Secs</span>
                 </div>
             </div>
         </section>
 
         <!-- Events Schedule -->
         <section class="space-y-6 text-center">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent/60">Celebration Schedule</span>
-            <h2 class="font-serif text-3xl text-goldAccent">Wedding Events</h2>
+            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">Celebration Schedule</span>
+            <h2 class="font-serif text-3xl text-goldBright">Wedding Events</h2>
             
             <div class="space-y-4 text-left">
-                <div class="bg-cardBg border border-goldAccent/20 rounded-xl p-5 space-y-2">
-                    <h3 class="font-serif text-xl text-goldAccent">Mehendi Ceremony</h3>
-                    <p class="text-xs text-goldAccent/70">13 Feb 2027 • 4:00 PM onwards</p>
+                <div class="bg-gradient-to-r from-[#2f143e] to-[#1c0b26] border border-goldAccent/30 rounded-2xl p-6 space-y-2 shadow-xl hover:border-goldAccent transition">
+                    <h3 class="font-serif text-2xl text-goldBright">Mehendi Ceremony</h3>
+                    <p class="text-xs text-goldAccent font-medium">13 Feb 2027 • 4:00 PM onwards</p>
                     <p class="text-xs text-gray-300">Poolside Lawn, Palace Gardens</p>
                 </div>
-                <div class="bg-cardBg border border-goldAccent/20 rounded-xl p-5 space-y-2">
-                    <h3 class="font-serif text-xl text-goldAccent">Sangeet Night</h3>
-                    <p class="text-xs text-goldAccent/70">13 Feb 2027 • 7:30 PM onwards</p>
+                <div class="bg-gradient-to-r from-[#2f143e] to-[#1c0b26] border border-goldAccent/30 rounded-2xl p-6 space-y-2 shadow-xl hover:border-goldAccent transition">
+                    <h3 class="font-serif text-2xl text-goldBright">Sangeet Night</h3>
+                    <p class="text-xs text-goldAccent font-medium">13 Feb 2027 • 7:30 PM onwards</p>
                     <p class="text-xs text-gray-300">Grand Ballroom, Palace Gardens</p>
                 </div>
-                <div class="bg-cardBg border border-goldAccent/20 rounded-xl p-5 space-y-2">
-                    <h3 class="font-serif text-xl text-goldAccent">The Wedding</h3>
-                    <p class="text-xs text-goldAccent/70">14 Feb 2027 • 10:30 AM</p>
+                <div class="bg-gradient-to-r from-[#2f143e] to-[#1c0b26] border border-goldAccent/30 rounded-2xl p-6 space-y-2 shadow-xl hover:border-goldAccent transition">
+                    <h3 class="font-serif text-2xl text-goldBright">The Wedding</h3>
+                    <p class="text-xs text-goldAccent font-medium">14 Feb 2027 • 10:30 AM</p>
                     <p class="text-xs text-gray-300">Main Mandap Area, Palace Gardens</p>
                 </div>
             </div>
@@ -124,20 +125,20 @@
 
         <!-- Venue Navigation -->
         <section class="text-center space-y-4">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent/60">Get Directions</span>
-            <h2 class="font-serif text-3xl text-goldAccent">The Venue</h2>
-            <div class="bg-cardBg border border-goldAccent/20 rounded-xl p-6 space-y-3">
-                <h3 class="font-serif text-xl text-goldAccent">Palace Gardens</h3>
+            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">Get Directions</span>
+            <h2 class="font-serif text-3xl text-goldBright">The Venue</h2>
+            <div class="bg-gradient-to-b from-[#2f143e] to-[#1c0b26] border border-goldAccent/30 rounded-2xl p-6 space-y-4 shadow-xl">
+                <h3 class="font-serif text-2xl text-goldBright">Palace Gardens</h3>
                 <p class="text-xs text-gray-300">Plot No. 12, Marine Drive, Mumbai</p>
-                <a href="https://maps.google.com" target="_blank" class="inline-block mt-2 border border-goldAccent text-goldAccent text-xs uppercase tracking-widest px-6 py-3 rounded hover:bg-goldAccent hover:text-darkBg transition">
+                <a href="https://maps.google.com" target="_blank" class="inline-block mt-2 bg-goldAccent text-royalPlum font-semibold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl shadow-lg hover:bg-white transition">
                     Open Google Maps ↗
                 </a>
             </div>
         </section>
 
         <!-- Footer / Closing -->
-        <section class="text-center space-y-4 pt-6 border-t border-goldAccent/20">
-            <h2 class="font-serif text-2xl text-goldAccent italic">We Await Your Presence</h2>
+        <section class="text-center space-y-4 pt-8 pb-12 border-t border-goldAccent/20">
+            <h2 class="font-serif text-2xl text-goldBright italic">We Await Your Presence</h2>
             <p class="text-xs text-gray-400">Made with love for Kabir & Aira</p>
         </section>
 
@@ -149,11 +150,11 @@
             const splash = document.getElementById('splash-screen');
             const main = document.getElementById('main-content');
             
-            // Fade out splash screen
             splash.style.opacity = '0';
             setTimeout(() => {
                 splash.style.display = 'none';
                 main.style.opacity = '1';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }, 700);
         }
 
