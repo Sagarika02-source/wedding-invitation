@@ -13,11 +13,11 @@
             theme: {
                 extend: {
                     colors: {
-                        royalPlum: '#220b2d',
-                        deepWine: '#130419',
-                        cardBg: '#2c1238',
-                        goldAccent: '#f3d5a2',
-                        goldBright: '#ffd700',
+                        creamBg: '#fbf9f5',
+                        warmCard: '#ffffff',
+                        royalBurgundy: '#58182b',
+                        goldAccent: '#c5a059',
+                        goldLight: '#e4c58a',
                     },
                     fontFamily: {
                         serif: ['"Cormorant Garamond"', 'serif'],
@@ -28,169 +28,151 @@
         }
     </script>
 </head>
-<body class="bg-gradient-to-b from-royalPlum via-deepWine to-black text-gray-100 font-sans antialiased selection:bg-goldAccent selection:text-royalPlum min-h-screen">
+<body class="bg-creamBg text-gray-800 font-sans antialiased selection:bg-goldAccent selection:text-white min-h-screen">
 
-    <!-- Interactive Envelope / Welcome Splash Screen -->
-    <section id="splash-screen" class="fixed inset-0 z-50 bg-gradient-to-br from-[#2a1238] via-[#130419] to-black flex flex-col items-center justify-center text-center p-6 transition-all duration-700">
-        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#f3d5a2_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <!-- Interactive Bright Greeting Splash Screen -->
+    <section id="splash-screen" class="fixed inset-0 z-50 bg-gradient-to-br from-[#58182b] via-[#3d101d] to-[#1f070f] flex flex-col items-center justify-center text-center p-6 transition-all duration-700">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e4c58a_1px,transparent_1px)] [background-size:24px_24px]"></div>
         
-        <div class="z-10 space-y-6 max-w-sm bg-black/50 p-8 rounded-3xl border-2 border-goldAccent/50 shadow-2xl backdrop-blur-xl">
-            <span class="text-xs uppercase tracking-[0.4em] text-goldAccent font-semibold">Medapati Wedding Invitation</span>
+        <div class="z-10 space-y-6 max-w-sm bg-creamBg/95 p-8 rounded-3xl border-2 border-goldAccent shadow-2xl backdrop-blur-xl">
+            <span class="text-xs uppercase tracking-[0.4em] text-royalBurgundy font-semibold">Wedding Invitation</span>
             
-            <div class="w-32 h-32 mx-auto rounded-full border-2 border-goldAccent/70 flex items-center justify-center p-3 shadow-2xl relative bg-gradient-to-tr from-goldAccent/20 to-transparent">
-                <div class="absolute inset-2 rounded-full border border-goldAccent/40"></div>
-                <h1 class="font-serif text-3xl text-goldBright italic font-bold">L & V</h1>
+            <div class="w-32 h-32 mx-auto rounded-full border-2 border-goldAccent flex items-center justify-center p-3 shadow-xl relative bg-gradient-to-tr from-goldLight/20 to-transparent">
+                <h1 class="font-serif text-3xl text-royalBurgundy italic font-bold">L & V</h1>
             </div>
 
             <div class="space-y-1">
-                <h2 class="font-serif text-2xl text-white font-semibold">Lilly Grace & Vijay Kumar</h2>
-                <p class="text-xs text-goldAccent tracking-widest uppercase">November 26, 2026</p>
+                <h2 class="font-serif text-2xl text-royalBurgundy font-bold">Lilly Grace & Vijay Kumar</h2>
+                <p class="text-xs text-goldAccent tracking-widest uppercase font-semibold">November 26, 2026</p>
             </div>
 
-            <button onclick="openInvitation()" class="mt-4 w-full bg-gradient-to-r from-[#e6c584] via-[#f3d5a2] to-[#dfb15b] text-royalPlum font-bold px-8 py-4 tracking-widest uppercase text-xs rounded-xl shadow-xl hover:brightness-110 transition transform active:scale-95">
+            <button onclick="openInvitation()" class="mt-4 w-full bg-gradient-to-r from-royalBurgundy to-[#76233b] text-goldLight font-bold px-8 py-4 tracking-widest uppercase text-xs rounded-xl shadow-lg hover:opacity-95 transition transform active:scale-95">
                Open Invitation ✨
             </button>
         </div>
     </section>
 
     <!-- Main Invitation Content -->
-    <div id="main-content" class="max-w-md mx-auto px-4 py-16 space-y-16 opacity-0 transition-opacity duration-1000">
+    <div id="main-content" class="max-w-md mx-auto px-4 py-16 space-y-12 opacity-0 transition-opacity duration-1000">
 
-        <!-- Header / Couple Monogram Intro -->
-        <section class="text-center space-y-4 pt-4">
-            <div class="w-20 h-20 mx-auto rounded-full border border-goldAccent/40 flex items-center justify-center bg-cardBg shadow-lg">
-                <span class="font-serif text-2xl text-goldBright italic">L & V</span>
+        <!-- Header & Couple Classy Photo Section -->
+        <section class="text-center space-y-4">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold">With Joyful Hearts</span>
+            <h1 class="font-serif text-4xl text-royalBurgundy font-bold">Lilly Grace & Vijay Kumar</h1>
+            <p class="font-serif italic text-sm text-gray-600 px-4">"What therefore God hath joined together, let not man put asunder."</p>
+            
+            <!-- Classy Couple Image Frame (Groom in Blazer, Bride in White Frock) -->
+            <div class="mt-6 rounded-3xl overflow-hidden border-2 border-goldAccent shadow-2xl max-w-xs mx-auto bg-warmCard p-2">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800" alt="Lilly Grace & Vijay Kumar" class="w-full h-80 object-cover rounded-2xl">
             </div>
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold block">Medapati Wedding Invitation</span>
-            <h1 class="font-serif text-4xl text-goldBright font-bold">Lilly Grace & Vijay Kumar</h1>
-            <p class="font-serif italic text-sm text-goldAccent/90">"What therefore God hath joined together, let not man put asunder."</p>
-            <div class="w-24 h-[1px] bg-goldAccent/40 mx-auto my-3"></div>
         </section>
 
         <!-- Parents Section -->
-        <section class="space-y-6 bg-cardBg/90 border border-goldAccent/40 rounded-3xl p-6 shadow-2xl text-center relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-goldAccent to-transparent"></div>
-            
-            <div class="space-y-2">
-                <span class="text-[10px] uppercase tracking-widest text-goldAccent/70 font-semibold block">Daughter of</span>
-                <h3 class="font-serif text-xl text-goldBright font-semibold">Medapati Babu Sundar Singh</h3>
-                <h3 class="font-serif text-xl text-goldBright font-semibold">& Medapati Hepsiba</h3>
+        <section class="space-y-4 bg-warmCard border border-goldAccent/40 rounded-3xl p-6 shadow-xl text-center">
+            <div class="space-y-1">
+                <span class="text-[10px] uppercase tracking-widest text-goldAccent font-bold block">Daughter of</span>
+                <h3 class="font-serif text-lg text-royalBurgundy font-semibold">Medapati Babu Sundar Singh & Medapati Hepsiba</h3>
             </div>
 
             <div class="w-16 h-[1px] bg-goldAccent/30 mx-auto"></div>
 
-            <div class="space-y-2">
-                <span class="text-[10px] uppercase tracking-widest text-goldAccent/70 font-semibold block">Son of</span>
-                <h3 class="font-serif text-xl text-goldBright font-semibold">Budala John</h3>
-                <h3 class="font-serif text-xl text-goldBright font-semibold">& Budala Padma</h3>
+            <div class="space-y-1">
+                <span class="text-[10px] uppercase tracking-widest text-goldAccent font-bold block">Son of</span>
+                <h3 class="font-serif text-lg text-royalBurgundy font-semibold">Budala John & Budala Padma</h3>
             </div>
         </section>
 
         <!-- Wedding Ceremony Details -->
-        <section class="bg-gradient-to-b from-[#341544] to-[#1c0a27] border-2 border-goldAccent/50 rounded-3xl p-6 text-center space-y-6 shadow-2xl">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">Holy Matrimony</span>
-            <h2 class="font-serif text-3xl text-goldBright font-bold">Wedding Ceremony</h2>
+        <section class="bg-gradient-to-b from-royalBurgundy to-[#3d101d] text-white rounded-3xl p-6 text-center space-y-5 shadow-2xl border-2 border-goldAccent">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldLight font-bold">Holy Matrimony</span>
+            <h2 class="font-serif text-3xl text-goldLight font-bold">Wedding Ceremony</h2>
             
-            <div class="font-serif text-lg text-white tracking-widest border-y border-goldAccent/30 py-3 font-semibold">
+            <div class="font-serif text-base text-creamBg tracking-widest border-y border-goldAccent/40 py-3 font-medium">
                 Thursday, 26th Nov 2026 • 10:00 AM[cite: 9]
             </div>
 
-            <div class="space-y-1 text-sm text-gray-300">
-                <p class="font-serif text-2xl text-goldBright font-semibold">Sreerastu Convention</p>
+            <div class="space-y-1 text-sm text-gray-200">
+                <p class="font-serif text-2xl text-goldLight font-semibold">Sreerastu Convention</p>
                 <p class="text-xs text-gray-300">RamaRaopeta, Kakinada[cite: 9]</p>
             </div>
 
-            <!-- Google Maps Button for Wedding Location -->
+            <!-- Direct Google Maps Location Button -->
             <div class="pt-2">
-                <a href="https://share.google/TG9azaepPCDv0mVlB" target="_blank" class="inline-block bg-goldAccent text-royalPlum font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg hover:bg-white transition transform active:scale-95">
+                <a href="https://share.google/TG9azaepPCDv0mVlB" target="_blank" class="inline-block bg-goldLight text-royalBurgundy font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg hover:bg-white transition">
                     📍 Open Wedding Location Map
                 </a>
             </div>
 
-            <div class="pt-3 border-t border-goldAccent/20 text-xs text-goldAccent/90 italic">
+            <div class="pt-2 border-t border-goldAccent/30 text-xs text-goldLight italic">
                 To be solemnized by Rev. D. Vara Prasad[cite: 9]
             </div>
         </section>
 
-        <!-- Reception Event Details -->
-        <section class="bg-gradient-to-b from-[#341544] to-[#1c0a27] border-2 border-goldAccent/50 rounded-3xl p-6 text-center space-y-6 shadow-2xl">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">Evening Celebration</span>
-            <h2 class="font-serif text-3xl text-goldBright font-bold">Reception</h2>
+        <!-- Reception Details -->
+        <section class="bg-gradient-to-b from-royalBurgundy to-[#3d101d] text-white rounded-3xl p-6 text-center space-y-5 shadow-2xl border-2 border-goldAccent">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldLight font-bold">Evening Celebration</span>
+            <h2 class="font-serif text-3xl text-goldLight font-bold">Reception</h2>
             
-            <div class="font-serif text-lg text-white tracking-widest border-y border-goldAccent/30 py-3 font-semibold">
+            <div class="font-serif text-base text-creamBg tracking-widest border-y border-goldAccent/40 py-3 font-medium">
                 Friday, 27th Nov 2026 • 5:00 PM[cite: 8]
             </div>
 
-            <div class="space-y-1 text-sm text-gray-300">
-                <p class="font-serif text-2xl text-goldBright font-semibold">RK Function Hall</p>
+            <div class="space-y-1 text-sm text-gray-200">
+                <p class="font-serif text-2xl text-goldLight font-semibold">RK Function Hall</p>
                 <p class="text-xs text-gray-300">Sujatha Nagar, Vsp.[cite: 8]</p>
             </div>
 
-            <!-- Google Maps Button for Reception Location -->
+            <!-- Direct Google Maps Location Button -->
             <div class="pt-2">
-                <a href="https://share.google/Vb6JJONMzNxhFhi2A" target="_blank" class="inline-block bg-goldAccent text-royalPlum font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg hover:bg-white transition transform active:scale-95">
+                <a href="https://share.google/Vb6JJONMzNxhFhi2A" target="_blank" class="inline-block bg-goldLight text-royalBurgundy font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg hover:bg-white transition">
                     📍 Open Reception Location Map
                 </a>
             </div>
         </section>
 
-        <!-- Blessings & God Servants -->
-        <section class="space-y-6 bg-cardBg/90 border border-goldAccent/40 rounded-3xl p-6 shadow-2xl text-center">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">By God's Grace & Blessings</span>
+        <!-- Blessings / God Servants (Clean & Simple) -->
+        <section class="space-y-4 bg-warmCard border border-goldAccent/40 rounded-3xl p-6 shadow-xl text-center">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold block">By God's Grace & Blessings</span>
             
-            <div class="space-y-6 pt-2">
-                <div class="space-y-1">
-                    <p class="font-serif text-lg text-goldBright font-semibold">Bro. David Martin, God Servant[cite: 8]</p>
-                    <p class="text-xs text-gray-400">Jehovah Nissi, Vizianagaram[cite: 8]</p>
-                </div>
-
-                <div class="text-goldAccent/50 font-serif text-xl">&</div>
-
-                <div class="space-y-1">
-                    <p class="font-serif text-lg text-goldBright font-semibold">Bro. Joshua Barnabas, God Servant[cite: 8]</p>
-                    <p class="text-xs text-gray-400">Jehovah Shammah, Tonnalagaruvu[cite: 8]</p>
-                </div>
-
-                <div class="pt-3 border-t border-goldAccent/20">
-                    <span class="text-[10px] uppercase tracking-widest text-goldAccent font-bold block mb-2">Resident God Servant</span>
-                    <p class="font-serif text-lg text-goldBright font-semibold">Bro. Jonathan Martin, God Servant[cite: 8]</p>
-                    <p class="text-xs text-gray-400">Patmos Church of Living God, Lankelapalem[cite: 8]</p>
-                </div>
+            <div class="space-y-3 text-sm text-gray-700 pt-1">
+                <p><strong class="text-royalBurgundy">Bro. David Martin</strong> (Jehovah Nissi, Vizianagaram)[cite: 8]</p>
+                <p><strong class="text-royalBurgundy">Bro. Joshua Barnabas</strong> (Jehovah Shammah, Tonnalagaruvu)[cite: 8]</p>
+                <p class="pt-2 border-t border-gray-100"><strong class="text-royalBurgundy">Resident God Servant:</strong><br>Bro. Jonathan Martin (Patmos Church of Living God, Lankelapalem)[cite: 8]</p>
             </div>
         </section>
 
         <!-- Live Countdown Timer -->
-        <section class="bg-gradient-to-b from-[#220b2d] to-[#130419] border border-goldAccent/40 rounded-3xl p-6 text-center space-y-4 shadow-xl">
-            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-semibold">Countdown to Wedding</span>
+        <section class="bg-warmCard border border-goldAccent/40 rounded-3xl p-6 text-center space-y-4 shadow-xl">
+            <span class="text-xs uppercase tracking-[0.3em] text-goldAccent font-bold">Countdown to Wedding</span>
             <div class="grid grid-cols-4 gap-2 text-center pt-2">
-                <div class="bg-black/60 p-3 rounded-xl border border-goldAccent/30 shadow-inner">
-                    <span id="days" class="block font-serif text-3xl text-goldBright font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-300 font-medium">Days</span>
+                <div class="bg-creamBg p-3 rounded-xl border border-goldAccent/30">
+                    <span id="days" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
+                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Days</span>
                 </div>
-                <div class="bg-black/60 p-3 rounded-xl border border-goldAccent/30 shadow-inner">
-                    <span id="hours" class="block font-serif text-3xl text-goldBright font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-300 font-medium">Hours</span>
+                <div class="bg-creamBg p-3 rounded-xl border border-goldAccent/30">
+                    <span id="hours" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
+                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Hours</span>
                 </div>
-                <div class="bg-black/60 p-3 rounded-xl border border-goldAccent/30 shadow-inner">
-                    <span id="minutes" class="block font-serif text-3xl text-goldBright font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-300 font-medium">Mins</span>
+                <div class="bg-creamBg p-3 rounded-xl border border-goldAccent/30">
+                    <span id="minutes" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
+                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Mins</span>
                 </div>
-                <div class="bg-black/60 p-3 rounded-xl border border-goldAccent/30 shadow-inner">
-                    <span id="seconds" class="block font-serif text-3xl text-goldBright font-bold">00</span>
-                    <span class="text-[9px] uppercase text-gray-300 font-medium">Secs</span>
+                <div class="bg-creamBg p-3 rounded-xl border border-goldAccent/30">
+                    <span id="seconds" class="block font-serif text-2xl text-royalBurgundy font-bold">00</span>
+                    <span class="text-[9px] uppercase text-gray-600 font-semibold">Secs</span>
                 </div>
             </div>
         </section>
 
-        <!-- Footer / Closing -->
-        <section class="text-center space-y-3 pt-4 pb-12 border-t border-goldAccent/20">
-            <h2 class="font-serif text-xl text-goldBright italic">"With joy we invite you to share our special day."</h2>
-            <p class="text-xs text-gray-400 uppercase tracking-widest">Medapati Wedding Invitation</p>
+        <!-- Footer -->
+        <section class="text-center space-y-2 pt-2 pb-8">
+            <p class="font-serif text-lg text-royalBurgundy italic">We await your gracious presence!</p>
+            <p class="text-[10px] uppercase tracking-widest text-gray-400">Medapati Wedding Invitation</p>
         </section>
 
     </div>
 
-    <!-- JavaScript for Gate Trigger & Countdown -->
+    <!-- JavaScript -->
     <script>
         function openInvitation() {
             const splash = document.getElementById('splash-screen');
