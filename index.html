@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lilly Grace & Vijay Kumar - Wedding Invitation</title>
+    
+    <!-- WhatsApp Rich Preview Meta Tags -->
+    <meta property="og:title" content="Lilly Grace & Vijay Kumar Wedding Invitation">
+    <meta property="og:description" content="Join us in celebrating our holy matrimony on Nov 26, 2026, and Reception on Nov 27, 2026.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -32,6 +38,16 @@
     </script>
 </head>
 <body class="bg-gradient-to-b from-[#fbf5e6] via-[#f2e2be] to-[#e4ce9d] text-gray-800 font-sans antialiased selection:bg-richGold selection:text-white min-h-screen">
+
+    <!-- Background Audio Element (Upload music.mp3 to your repo) -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Music Toggle Button -->
+    <button onclick="toggleMusic()" id="music-btn" class="fixed top-4 right-4 z-50 hidden bg-[#fffbf0] border-2 border-richGold text-royalBurgundy px-4 py-2 rounded-full shadow-2xl flex items-center space-x-2 text-xs font-bold transition hover:scale-105">
+        <span id="music-icon">🎵</span> <span id="music-text">Play Music</span>
+    </button>
 
     <!-- Interactive Royal Gold Splash Screen -->
     <section id="splash-screen" class="fixed inset-0 z-50 bg-gradient-to-br from-[#58182b] via-[#3d101d] to-[#1f070f] flex flex-col items-center justify-center text-center p-6 transition-all duration-700">
@@ -96,23 +112,26 @@
             <h2 class="font-serif text-3xl text-goldGradientStart font-bold">Wedding Ceremony</h2>
             
             <div class="font-serif text-base text-goldGradientStart tracking-widest border-y border-richGold/50 py-3 font-semibold">
-                Thursday, 26th Nov 2026 • 10:00 AM
+                Thursday, 26th Nov 2026 • 10:00 AM[cite: 9]
             </div>
 
             <div class="space-y-1 text-sm text-gray-200">
                 <p class="font-serif text-2xl text-goldGradientStart font-semibold">Sreerastu Convention</p>
-                <p class="text-xs text-gray-300">RamaRaopeta, Kakinada</p>
+                <p class="text-xs text-gray-300">RamaRaopeta, Kakinada[cite: 9]</p>
             </div>
 
             <!-- Direct Google Maps Location Button -->
-            <div class="pt-2">
+            <div class="pt-2 flex flex-col gap-2">
                 <a href="https://share.google/TG9azaepPCDv0mVlB" target="_blank" class="inline-block bg-gradient-to-r from-goldGradientStart via-richGold to-goldGradientEnd text-royalBurgundy font-extrabold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg hover:brightness-110 transition">
                     📍 Open Wedding Location Map
+                </a>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Lilly+Grace+and+Vijay+Kumar+Wedding&dates=20261126T043000Z/20261126T080000Z&details=Holy+Matrimony+at+Sreerastu+Convention,+Kakinada" target="_blank" class="text-xs text-goldGradientStart underline hover:text-white">
+                    📅 Add Wedding to Google Calendar
                 </a>
             </div>
 
             <div class="pt-2 border-t border-richGold/40 text-xs text-goldGradientStart italic">
-                To be solemnized by Rev. D. Vara Prasad
+                To be solemnized by Rev. D. Vara Prasad[cite: 9]
             </div>
         </section>
 
@@ -122,18 +141,21 @@
             <h2 class="font-serif text-3xl text-goldGradientStart font-bold">Reception</h2>
             
             <div class="font-serif text-base text-goldGradientStart tracking-widest border-y border-richGold/50 py-3 font-semibold">
-                Friday, 27th Nov 2026 • 5:00 PM
+                Friday, 27th Nov 2026 • 5:00 PM[cite: 8]
             </div>
 
             <div class="space-y-1 text-sm text-gray-200">
                 <p class="font-serif text-2xl text-goldGradientStart font-semibold">RK Function Hall</p>
-                <p class="text-xs text-gray-300">Sujatha Nagar, Vsp.</p>
+                <p class="text-xs text-gray-300">Sujatha Nagar, Vsp.[cite: 8]</p>
             </div>
 
             <!-- Direct Google Maps Location Button -->
-            <div class="pt-2">
+            <div class="pt-2 flex flex-col gap-2">
                 <a href="https://share.google/Vb6JJONMzNxhFhi2A" target="_blank" class="inline-block bg-gradient-to-r from-goldGradientStart via-richGold to-goldGradientEnd text-royalBurgundy font-extrabold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg hover:brightness-110 transition">
                     📍 Open Reception Location Map
+                </a>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Lilly+Grace+and+Vijay+Kumar+Reception&dates=20261127T113000Z/20261127T150000Z&details=Reception+at+RK+Function+Hall,+Sujatha+Nagar,+Vsp" target="_blank" class="text-xs text-goldGradientStart underline hover:text-white">
+                    📅 Add Reception to Google Calendar
                 </a>
             </div>
         </section>
@@ -144,9 +166,9 @@
             <span class="text-xs uppercase tracking-[0.3em] text-richGold font-extrabold block pt-1">By God's Grace & Blessings</span>
             
             <div class="space-y-3 text-sm text-gray-700 pt-1">
-                <p><strong class="text-royalBurgundy">Bro. David Martin</strong> (Jehovah Nissi, Vizianagaram)</p>
-                <p><strong class="text-royalBurgundy">Bro. Joshua Barnabas</strong> (Jehovah Shammah, Tonnalagaruvu)</p>
-                <p class="pt-2 border-t border-richGold/30"><strong class="text-royalBurgundy">Resident God Servant:</strong><br>Bro. Jonathan Martin (Patmos Church of Living God, Lankelapalem)</p>
+                <p><strong class="text-royalBurgundy">Bro. David Martin</strong> (Jehovah Nissi, Vizianagaram)[cite: 8]</p>
+                <p><strong class="text-royalBurgundy">Bro. Joshua Barnabas</strong> (Jehovah Shammah, Tonnalagaruvu)[cite: 8]</p>
+                <p class="pt-2 border-t border-richGold/30"><strong class="text-royalBurgundy">Resident God Servant:</strong><br>Bro. Jonathan Martin (Patmos Church of Living God, Lankelapalem)[cite: 8]</p>
             </div>
         </section>
 
@@ -181,18 +203,45 @@
 
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript for Music and Countdown -->
     <script>
+        const music = document.getElementById('bg-music');
+        let isPlaying = false;
+
         function openInvitation() {
             const splash = document.getElementById('splash-screen');
             const main = document.getElementById('main-content');
+            const musicBtn = document.getElementById('music-btn');
             
+            // Try to play music
+            music.play().then(() => {
+                isPlaying = true;
+                document.getElementById('music-icon').innerText = "⏸️";
+                document.getElementById('music-text').innerText = "Pause Music";
+            }).catch(e => console.log("Audio play blocked by browser policy"));
+
+            musicBtn.classList.remove('hidden');
+
             splash.style.opacity = '0';
             setTimeout(() => {
                 splash.style.display = 'none';
                 main.style.opacity = '1';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }, 700);
+        }
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                isPlaying = false;
+                document.getElementById('music-icon').innerText = "🎵";
+                document.getElementById('music-text').innerText = "Play Music";
+            } else {
+                music.play();
+                isPlaying = true;
+                document.getElementById('music-icon').innerText = "⏸️";
+                document.getElementById('music-text').innerText = "Pause Music";
+            }
         }
 
         // Countdown Timer Logic targeting Wedding Date (Nov 26, 2026)
